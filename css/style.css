@@ -1,0 +1,276 @@
+:root {
+	--color-lightgray: #f6f6f6;
+	--color-verydark: #191714;
+	--color-dark: #454543;
+	--color-gray: #b6a999;
+	--color-yellow: #fcbc38;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+/*****************  Navigation ***************************/
+.navigation {
+	background-color: var(--color-verydark);
+	width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: white;
+	font-size: 22px;
+}
+
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+	color: var(--color-yellow);
+}
+
+.navigation a:hover {
+	color: var(--color-yellow);
+	transition: all 0.2s;
+	transform: scale(1.1);
+}
+
+.navigation ul {
+	list-style: none;
+	padding-right: 15em;
+	margin-bottom: 0;
+}
+
+.navigation li {
+	margin: 0 1em 0 5em;
+}
+
+/*****************  Titres ***************************/
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
+}
+
+h2.secondtitle {
+	margin-top: 4rem;
+}
+
+h3 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	margin-top: 0.5em;
+	font-size: 32px;
+}
+
+p.quote {
+	margin-top: 5rem;
+	font-style: italic;
+}
+
+/*****************  Boutons ***************************/
+.firstbutton {
+	margin-top: 2rem;
+	font-size: 24px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	width: 250px;
+	height: 80px;
+}
+
+.btn {
+	background-color: var(--color-yellow);
+	border: none;
+	color: black;
+	padding: 10px;
+
+	border-radius: 10px;
+}
+
+.btn:hover {
+	background-color: var(--color-dark);
+	transition: all 0.5s;
+}
+
+i.fa-angle-down {
+	font-size: 48px;
+}
+
+/*****************  Layout Partie 1 ***************************/
+
+@media (min-width: 1200px) {
+	.top--container {
+		height: 65vh;
+	}
+	h1.maintitle {
+		margin-top: 1em;
+	}
+	h1.secondtitle {
+		margin-top: 3em;
+		margin-bottom: 1em;
+	}
+}
+.header--left {
+	padding-top: 2em;
+}
+
+.header--right {
+	padding: 0;
+}
+
+.hero--image {
+	height: 100%;
+	max-height: 70vh;
+	width: 100%;
+	object-fit: cover;
+	margin: 0;
+	padding: 0;
+	border-bottom-left-radius: 15px;
+}
+
+/*****************  Partie 2 ***************************/
+
+.galerie img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.galerie div {
+	padding: 0;
+	margin: 0;
+	background-color: var(--color-lightgray);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.galerie div:nth-child(1) {
+		order: 1;
+	}
+
+	.galerie div:nth-child(2) {
+		order: 2;
+	}
+
+	.galerie div:nth-child(4) {
+		order: 3;
+	}
+
+	.galerie div:nth-child(3) {
+		order: 4;
+	}
+
+	.galerie div:nth-child(5) {
+		order: 6;
+	}
+
+	.galerie div:nth-child(6) {
+		order: 5;
+	}
+
+	.galerie div:nth-child(7) {
+		order: 7;
+	}
+
+	.galerie div:nth-child(8) {
+		order: 8;
+	}
+}
+
+.galerie {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.flex-column {
+	height: 100%;
+}
+
+.btn-secondary {
+	width: 70%;
+	margin: 0 auto 1em auto;
+}
+
+/* Contact Form */
+
+.textarea {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	max-height: 10em;
+	background-color: #f6f4f4;
+}
+
+.form-control {
+	background-color: #f6f4f4;
+	border: none;
+	border-bottom: 5px solid var(--color-dark);
+	min-height: 3em;
+	border-radius: 0;
+}
+
+.form-control:focus {
+	border-color: var(--color-dark);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px var(--color-yellow);
+	outline: 0 none;
+}
+
+/* Last part */
+
+.about1 {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.about1 img {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover left;
+}
+.about2 {
+	margin: 0;
+	padding: 0;
+}
+@media (max-width: 1200px) {
+	.about1 {
+		flex-direction: column;
+	}
+}
+
+.about--me {
+	background-color: var(--color-dark);
+	color: white;
+	padding: 2em;
+	border-top-right-radius: 15px;
+}
+
+.footer {
+	background-color: var(--color-verydark);
+	color: white;
+	text-align: center;
+	padding: 2em 0 1em 0;
+	max-width: 100%;
+	margin-top: 0;
+}
+
+/* Animations */
+.object {
+	animation: MoveUpDown 1s linear infinite;
+	position: relative;
+}
+
+@keyframes MoveUpDown {
+	0%,
+	100% {
+		bottom: 0;
+	}
+
+	50% {
+		bottom: 10px;
+	}
+}
